@@ -47,7 +47,8 @@ with tab1:
 
     with col1:
         age = st.number_input("🧓 Age", 20, 100, 45, help="Age of the patient in years")
-        sex = st.selectbox("👤 Sex", ["Male", "Female"])
+        sex_str = st.selectbox("👤 Sex", ["Male", "Female"])
+        sex = 1 if sex_str == "Male" else 0
         cp = st.selectbox("💢 Chest Pain Type", [0, 1, 2, 3],
                           help="Type of chest pain experienced")
         trestbps = st.number_input("🩺 Resting Blood Pressure", 80, 200, 120,
